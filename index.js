@@ -21,11 +21,28 @@ const dataBelanjaan = [
 ];
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const listBelanjaan = null;
 
-// boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const totalBelanjaan = null;
+const listBelanjaan = (x) => {
+  
+  let belanja = []
 
+  for (let a=0; a< x.length ; a++){
+    belanja.push("- " + x[a].nama + " x " + x[a].kuantitas);
+  }
+  return belanja;
+};
+
+// // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
+const totalBelanjaan = (a) => {
+
+  let total = 0;
+
+  for ( b=0; b < a.length; b++ ){
+    total += a[b].harga * a[b].kuantitas;
+  }
+
+  return total;
+};
 // ! JANGAN DIMODIFIKASI
 const main = () => {
   console.log("Selamat datang customer");
@@ -44,3 +61,8 @@ module.exports = {
   listBelanjaan,
   totalBelanjaan,
 };
+
+
+
+
+
